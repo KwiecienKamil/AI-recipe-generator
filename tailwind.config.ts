@@ -11,7 +11,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        gradient1: "#9bee4e",
+        gradient2: "#ffa37d",
         accent: "#CD9143",
+      },
+      fontFamily: {
+        DynaPuff: "DynaPuff",
+        Oswald: "Oswald",
       },
     },
   },

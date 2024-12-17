@@ -1,62 +1,33 @@
 "use client";
-import axios from "axios";
-import { useState } from "react";
-import Recipes from "./components/Recipes";
+import Link from "next/link";
+import { PiOvenBold } from "react-icons/pi";
 
 export default function Home() {
-  const [userInput, setUserInput] = useState("");
-  const [recipes, setRecipes] = useState(null);
-
-  const handleOpenAiCall = (userInput: any) => {
-    // Make sure to pass the user's input as an argument to the function
-    axios
-      .post("http://localhost:3000/api/ai", {
-        userPrompt: userInput, // Include the user's input in the POST request body
-      })
-      .then((res) => {
-        let rawData = res.data.completion;
-
-        // Clean the raw response data (if necessary)
-        rawData = rawData.replace(/```json|```/g, "").trim();
-
-        try {
-          const cleanedData = JSON.parse(rawData); // Parse JSON from the cleaned data
-
-          console.log("Cleaned JSON:", cleanedData);
-          setRecipes(cleanedData); // Update state with the cleaned data
-        } catch (error) {
-          console.error("Error parsing JSON:", error);
-        }
-      })
-      .catch((error) => {
-        console.error("Error making the API call:", error);
-      });
-  };
-
-  const handleGenerateRecipes = () => {
-    handleOpenAiCall(userInput); // Call the function with user input
-  };
-
   return (
-    <div className="h-full w-full justify-center rounded-xl">
-      <div>
-        <h1>Recipe Generator</h1>
-        <textarea
-          value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-          placeholder="Enter your recipe prompt here..."
-        />
-        <button onClick={handleGenerateRecipes}>Generate Recipes</button>
-        {recipes && (
-          <div>
-            <h2>Generated Recipes:</h2>
-            <div className="">
-              {recipes.map((recipe: any) => (
-                <p>{recipe.name}</p>
-              ))}
-            </div>
-          </div>
-        )}
+    <div className="h-full w-full rounded-2xl bg-[#1A1A1A] text-white font-montserrat px-[5%]">
+      <div className="flex items-center justify-between mt-[2%]">
+        <Link href="/" className="flex items-center cursor-pointer">
+          <PiOvenBold className="text-4xl" />
+          <h1 className="text-4xl font-DynaPuff">CoNaTalerz</h1>
+        </Link>
+        <div className="flex items-center gap-8 text-2xl">
+          <a href="#">Strona główna</a>
+          <a href="#">Generuj przepisy</a>
+          <a href="#">O nas</a>
+          <a href="#">Kontakt</a>
+        </div>
+      </div>
+      <div className="w-full flex items-center justify-between gap-4 pt-32">
+        <div>
+          <h2 className="text-5xl font-DynaPuff">
+            Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
+          </h2>
+          <p className="text-xl mt-2 text-gray-400">
+            Wpisz produkty, kliknij przycisk i ciesz się z wygenerowanych
+            przepisów
+          </p>
+        </div>
+        <div></div>
       </div>
     </div>
   );
