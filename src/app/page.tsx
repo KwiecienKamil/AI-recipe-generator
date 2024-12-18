@@ -2,12 +2,14 @@
 import Link from "next/link";
 import { PiOvenBold } from "react-icons/pi";
 import { FiArrowRight } from "react-icons/fi";
+import homepageImage2 from "./assets/homepage2.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="h-full w-full rounded-2xl  bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
       <div className="flex items-center justify-between mt-[2%]">
-        <Link href="/" className="flex items-center cursor-pointer">
+        <Link href="/" className="flex items-center cursor-pointer ">
           <PiOvenBold className="text-4xl" />
           <h1 className="text-4xl font-DynaPuff">CoNaTalerz</h1>
         </Link>
@@ -18,9 +20,9 @@ export default function Home() {
           <Link href="#">Kontakt</Link>
         </div>
       </div>
-      <div className="w-full flex items-center justify-between gap-4 pt-32">
+      <div className="w-full flex items-center justify-between gap-4 pt-8">
         <div>
-          <h2 className="text-5xl font-DynaPuff">
+          <h2 className="text-6xl font-DynaPuff">
             Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
           </h2>
           <p className="text-xl mt-2 text-gray-200">
@@ -32,7 +34,7 @@ export default function Home() {
               <p className="cursor-default text-lg">Wpisz swoje składniki</p>
               <div className="flex items-center gap-1">
                 <FiArrowRight className="text-xl animate-pulse" />
-                <button className="px-4 py-2 bg-[#b8a225] rounded-xl font-semibold  cursor-default">
+                <button className="flex items-center justify-center px-4 py-2 bg-white/40 rounded-xl font-semibold  cursor-default">
                   Generuj
                 </button>
               </div>
@@ -63,14 +65,16 @@ export default function Home() {
             <div className="w-[65%] flex items-center justify-center mt-8">
               <Link
                 href="/recipes"
-                className="px-6 py-2 bg-[#b8a225] rounded-xl text-2xl"
+                className="px-6 py-2 bg-accent rounded-xl text-3xl hover:brightness-75 duration-300"
               >
-                Sprawdź teraz
+                Wypróbuj teraz!
               </Link>
             </div>
           </div>
         </div>
-        <div></div>
+        <div className="pt-8">
+          <Image src={homepageImage2} alt="Food" className="max-w-[800px]" />
+        </div>
       </div>
     </div>
   );

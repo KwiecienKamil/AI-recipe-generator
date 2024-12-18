@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`h-screen flex items-center p-6 justify-center font-Oswald`}
+        className={`h-screen flex items-center p-8 justify-center bg-accent font-Oswald`}
       >
         {children}
       </body>
