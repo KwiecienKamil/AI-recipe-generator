@@ -42,6 +42,7 @@ const page = () => {
           value={userInput}
           onChange={(e) => setUserInput(e.target.value)}
           placeholder="Enter your recipe prompt here..."
+          className="p-4"
         />
         <button
           onClick={handleGenerateRecipes}

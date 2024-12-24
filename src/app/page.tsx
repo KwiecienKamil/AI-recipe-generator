@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { FaPlateWheat } from "react-icons/fa6";
-import { PiOvenBold } from "react-icons/pi";
 import { FiArrowRight } from "react-icons/fi";
 import homepageImage2 from "./assets/homepage2.png";
 import Image from "next/image";
