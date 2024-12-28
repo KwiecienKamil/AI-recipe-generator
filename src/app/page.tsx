@@ -1,25 +1,13 @@
 "use client";
 import Link from "next/link";
-import { FaPlateWheat } from "react-icons/fa6";
 import { FiArrowRight } from "react-icons/fi";
 import homepageImage2 from "./assets/homepage2.png";
 import Image from "next/image";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="h-full w-full rounded-2xl  bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
-      <div className="flex items-center justify-between mt-[2%]">
-        <Link href="/" className="flex items-center cursor-pointer ">
-          <FaPlateWheat className="text-3xl" />
-          <h1 className="text-4xl font-DynaPuff">CoNaTalerz</h1>
-        </Link>
-        <div className="flex items-center gap-8 text-2xl">
-          <Link href="/">Strona główna</Link>
-          <Link href="/recipes">Generuj przepisy</Link>
-          <Link href="#">O nas</Link>
-          <Link href="#">Kontakt</Link>
-        </div>
-      </div>
+    <div className="h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
       <div className="w-full flex items-center justify-between gap-4 pt-8">
         <div>
           <h2 className="text-6xl font-DynaPuff">

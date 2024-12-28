@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/utils/openai.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/utils/openai.js", "src/app/utils/Helpers.js", "src/app/utils/Helpers.js"],
   "exclude": ["node_modules"]
 }

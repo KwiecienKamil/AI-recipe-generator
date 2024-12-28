@@ -35,7 +35,7 @@ const page = () => {
   };
 
   return (
-    <div className="h-full rounded-xl font-montserrat">
+    <div className="h-full font-montserrat pt-8">
       <div className="flex flex-col justify-center">
         <h1>Recipe Generator</h1>
         <textarea
