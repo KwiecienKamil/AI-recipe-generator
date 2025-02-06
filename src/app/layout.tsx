@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`h-screen flex items-center justify-center bg-accent font-Oswald pt-[2%]`}
+        className={`h-screen flex items-center justify-center bg-accent font-Oswald`}
       >
         <Navbar />
         {children}

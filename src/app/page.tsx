@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <div className="h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
-      <div className="w-full flex items-center justify-between gap-4 pt-8">
+      <div className="w-full flex items-center justify-between gap-4 pt-24">
         <div>
           <h2 className="text-6xl font-DynaPuff">
             Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
