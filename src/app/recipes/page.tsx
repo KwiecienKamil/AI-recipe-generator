@@ -39,8 +39,8 @@ const page = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center font-montserrat pt-24">
-      <div className="w-[30%] pb-8">
+    <div className="relative w-full h-screen flex flex-col items-center font-montserrat mt-48">
+      <div className="w-[50%] lg:w-[30%] pb-8">
         <div className="flex flex-col text-xl">
           <textarea
             value={userInput}
@@ -65,14 +65,16 @@ const page = () => {
       {recipes && (
         <div>
           {recipes && (
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {recipes.map((recipe: any) => (
                 <div
                   className="p-2 bg-white/40 max-w-96 rounded-xl"
-                  key={Math.floor(Math.random() * 999)}
+                  key={recipe.name}
                 >
-                  <h4 className="font-semibold">{recipe.name}</h4>
-                  <p className="py-2 text-gray-400">{recipe.description}</p>
+                  <h4 className="font-semibold text-accent text-xl">
+                    {recipe.name}
+                  </h4>
+                  <p className="py-2 text-[#1d1d1d]">{recipe.description}</p>
                   <div className="flex flex-col">
                     {recipe.instructions.map((str: string, index: number) => (
                       <p key={index}>{str}</p>
