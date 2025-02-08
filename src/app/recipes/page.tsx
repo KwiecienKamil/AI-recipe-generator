@@ -1,7 +1,6 @@
 "use client";
 import axios from "axios";
 import { useState } from "react";
-import { CgShapeHalfCircle } from "react-icons/cg";
 import { SiCircleci } from "react-icons/si";
 
 const page = () => {
@@ -32,17 +31,21 @@ const page = () => {
   };
 
   const handleGenerateRecipes = () => {
-    handleOpenAiCall(userInput);
+    if (userInput.length == 0) {
+    } else {
+      handleOpenAiCall(userInput);
+      setUserInput("");
+    }
   };
 
   return (
-    <div className="flex flex-col justify-center items-center font-montserrat pt-24">
+    <div className="flex flex-col items-center font-montserrat pt-24">
       <div className="w-[20rem] pb-8">
-        <div className="flex flex-col justify-center">
+        <div className="flex flex-col justify-between">
           <textarea
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Enter your recipe prompt here..."
+            placeholder="Enter your ingredients"
             className="p-4"
           />
           <button
@@ -50,7 +53,7 @@ const page = () => {
             className="px-4 py-2 bg-black text-white hover:brightness-75 duration-300 text-center"
           >
             {loading ? (
-              <span className="text-center">
+              <span className="flex justify-center">
                 <SiCircleci className="animate-spin" />
               </span>
             ) : (
@@ -62,15 +65,19 @@ const page = () => {
       {recipes && (
         <div>
           {recipes && (
-            <div
-              className="grid grid-cols-3 gap-2"
-              key={Math.floor(Math.random() * 999)}
-            >
+            <div className="grid grid-cols-3 gap-2">
               {recipes.map((recipe: any) => (
-                <div className="p-2 bg-white/40 max-w-96 rounded-xl">
-                  <h4>{recipe.name}</h4>
-                  <p>{recipe.description}</p>
-                  <p>{recipe.instructions}</p>
+                <div
+                  className="p-2 bg-white/40 max-w-96 rounded-xl"
+                  key={Math.floor(Math.random() * 999)}
+                >
+                  <h4 className="font-semibold">{recipe.name}</h4>
+                  <p className="py-2 text-gray-400">{recipe.description}</p>
+                  <div className="flex flex-col">
+                    {recipe.instructions.map((str: string, index: number) => (
+                      <p key={index}>{str}</p>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>

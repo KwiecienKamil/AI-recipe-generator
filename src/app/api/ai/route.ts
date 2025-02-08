@@ -44,7 +44,7 @@ export async function POST(req: Request) {
         { role: "system", content: "You are a helpful assistant." },
         {
           role: "user",
-          content: `Generate six recipes for ${userPrompt} dish. Output should be in JSON array and each object should contain field name named 'name', description field named 'description' and array of step by step instructions`, // Use the prompt provided by the frontend
+          content: `Generate six recipes for ${userPrompt} dish. Output should be in JSON array and each object should contain field name named 'name', description field named 'description' and array of step by step instructions. After dot add space. If you don't know the ingredient just generate random dish.`,
         },
       ],
     });
