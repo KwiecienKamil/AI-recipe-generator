@@ -22,6 +22,33 @@ export const navLinks = [
   },
 ];
 
+export const promptExamples = [
+  {
+    id: 1,
+    content: "kurczak, ryż, mix warzyw",
+  },
+  {
+    id: 2,
+    content: "wołowina, tortilla, ser żółty",
+  },
+  {
+    id: 3,
+    content: "kasza, schab, brokół",
+  },
+  {
+    id: 4,
+    content: "wieprzowina, ziemniaki",
+  },
+  {
+    id: 5,
+    content: "chleb, szynka, pieczarki",
+  },
+  {
+    id: 6,
+    content: "Makaron, mleko",
+  },
+];
+
 export const defaultIngredients = [
   {
     id: 1,

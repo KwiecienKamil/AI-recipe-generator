@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import homepageImage2 from "./assets/homepage2.png";
 import Image from "next/image";
+import { promptExamples } from "./utils/Helpers";
 
 export default function Home() {
   return (
@@ -30,24 +31,14 @@ export default function Home() {
           <div className="mt-8">
             <h3 className="text-2xl">Przykładowe składniki</h3>
             <div className="flex justify-between w-[65%] flex-wrap gap-4 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
-              <div className="grid place-items-center bg-white/20 p-1 rounded-xl w-[30%]">
-                kurczak, ryż, mix warzyw
-              </div>
-              <div className="grid place-items-center bg-white/20 p-2 rounded-xl w-[30%]">
-                wołowina, tortilla, ser żółty
-              </div>
-              <div className="grid place-items-center bg-white/20 p-2 rounded-xl w-[30%]">
-                kasza, schab, ogórek kiszony
-              </div>
-              <div className="grid place-items-center bg-white/20 p-2 rounded-xl w-[30%]">
-                wieprzowina, ziemniaki, pomidor
-              </div>
-              <div className="grid place-items-center bg-white/20 p-2 rounded-xl w-[30%]">
-                chleb, szynka, pieczarki
-              </div>
-              <div className="grid place-items-center bg-white/20 p-2 rounded-xl w-[30%]">
-                Makaron, sos w proszku, ser żółty
-              </div>
+              {promptExamples.map((prompt) => (
+                <div
+                  key={prompt.id}
+                  className="grid place-items-center bg-white/20 p-1 rounded-xl w-[30%]"
+                >
+                  {prompt.content}
+                </div>
+              ))}
             </div>
             <div className="w-[65%] flex items-center justify-center mt-8">
               <Link
@@ -60,7 +51,11 @@ export default function Home() {
           </div>
         </div>
         <div className="pt-8">
-          <Image src={homepageImage2} alt="Food" className="max-w-[800px]" />
+          <Image
+            src={homepageImage2}
+            alt="Food"
+            className="max-w-[600px] lg:max-w-[800px]"
+          />
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
@@ -15,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`h-screen flex items-center justify-center bg-accent font-Oswald`}
-      >
+      <body className={`h-screen flex flex-col bg-accent font-Oswald`}>
         <Navbar />
         {children}
       </body>

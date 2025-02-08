@@ -8,7 +8,7 @@ const page = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const handleOpenAiCall = (userInput: any) => {
+  const handleOpenAiCall = (userInput: string) => {
     setLoading(true);
     axios
       .post("http://localhost:3000/api/ai", {
@@ -39,7 +39,7 @@ const page = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center font-montserrat mt-48">
+    <div className="relative w-full h-screen flex flex-col items-center font-montserrat ">
       <div className="w-[50%] lg:w-[30%] pb-8">
         <div className="flex flex-col text-xl">
           <textarea
@@ -74,8 +74,8 @@ const page = () => {
                   <h4 className="font-semibold text-accent text-xl">
                     {recipe.name}
                   </h4>
-                  <p className="py-2 text-[#1d1d1d]">{recipe.description}</p>
-                  <div className="flex flex-col">
+                  <p>{recipe.description}</p>
+                  <div className="pt-4 flex flex-col text-[#1d1d1d]">
                     {recipe.instructions.map((str: string, index: number) => (
                       <p key={index}>{str}</p>
                     ))}
