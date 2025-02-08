@@ -39,25 +39,25 @@ const page = () => {
   };
 
   return (
-    <div className="flex flex-col items-center font-montserrat pt-24">
-      <div className="w-[20rem] pb-8">
-        <div className="flex flex-col justify-between">
+    <div className="relative w-full h-screen flex flex-col items-center font-montserrat pt-24">
+      <div className="w-[30%] pb-8">
+        <div className="flex flex-col text-xl">
           <textarea
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Enter your ingredients"
-            className="p-4"
+            placeholder="Wpisz składniki"
+            className="p-4 rounded-t-xl"
           />
           <button
             onClick={handleGenerateRecipes}
-            className="px-4 py-2 bg-black text-white hover:brightness-75 duration-300 text-center"
+            className="px-4 py-2 bg-black text-white rounded-b-xl hover:brightness-75 duration-300 text-center"
           >
             {loading ? (
-              <span className="flex justify-center">
+              <span className="flex justify-center text-2xl">
                 <SiCircleci className="animate-spin" />
               </span>
             ) : (
-              <span>Generate recipes</span>
+              <span className="text-xl">Generuj przepisy</span>
             )}
           </button>
         </div>

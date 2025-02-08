@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
 import homepageImage2 from "./assets/homepage2.png";
 import Image from "next/image";
-import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
@@ -29,7 +28,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8">
-            <h3 className="text-2xl">Przykładowe zapytania</h3>
+            <h3 className="text-2xl">Przykładowe składniki</h3>
             <div className="flex justify-between w-[65%] flex-wrap gap-4 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
               <div className="grid place-items-center bg-white/20 p-1 rounded-xl w-[30%]">
                 kurczak, ryż, mix warzyw
