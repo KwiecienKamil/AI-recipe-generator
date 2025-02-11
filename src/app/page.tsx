@@ -7,8 +7,8 @@ import { promptExamples } from "./utils/Helpers";
 
 export default function Home() {
   return (
-    <div className="relative h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
-      <div className="w-full flex items-center justify-between gap-4">
+    <section className="relative h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
+      <div className="w-full flex items-center justify-between gap-4 pt-8">
         <div>
           <h2 className="text-6xl font-DynaPuff">
             Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="w-[65%] flex items-center justify-center mt-8">
               <Link
                 href="/recipes"
-                className="px-6 py-3 bg-accent rounded-xl text-3xl hover:brightness-75 duration-300"
+                className="px-6 py-3 bg-[#cca32a] rounded-xl text-3xl hover:brightness-75 duration-300"
               >
                 Wypróbuj teraz!
               </Link>
@@ -58,6 +58,6 @@ export default function Home() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }

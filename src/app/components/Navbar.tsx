@@ -8,7 +8,8 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <div className="h-24 w-full flex items-center justify-between bg-[url('/bg.jpg')] bg-right brightness-95 py-8 px-[5%] text-white">
+    <nav className="h-24 w-full flex items-center justify-between bg-accent py-8 px-[5%] text-white">
+      {/* // bg-[url('/bg.jpg')] bg-right brightness-95 */}
       <Link href="/" className="flex items-center cursor-pointer ">
         <FaPlateWheat className="text-3xl" />
         <h1 className="text-2xl font-DynaPuff">CoNaTalerz</h1>
@@ -32,7 +33,7 @@ const Navbar = () => {
           );
         })}
       </div>
-    </div>
+    </nav>
   );
 };
 

@@ -39,7 +39,7 @@ const page = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center font-montserrat pt-16">
+    <div className="relative w-full h-screen flex flex-col items-center font-montserrat pt-4">
       <div className="w-[50%] lg:w-[30%] pb-8">
         <div className="flex flex-col text-xl">
           <textarea
