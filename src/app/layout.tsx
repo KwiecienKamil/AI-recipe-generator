@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
   title: "CoNaTalerz.pl",
@@ -14,8 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-screen flex flex-col bg-accent font-Oswald`}>
-        <Navbar />
+      <body className={`flex flex-col font-Oswald`}>
         {children}
       </body>
     </html>

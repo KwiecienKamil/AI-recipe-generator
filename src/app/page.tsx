@@ -4,11 +4,14 @@ import { FiArrowRight } from "react-icons/fi";
 import homepageImage2 from "./assets/homepage2.png";
 import Image from "next/image";
 import { promptExamples } from "./utils/Helpers";
+import Navbar from "./components/Navbar";
+
 
 export default function Home() {
   return (
     <section className="relative h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
-      <div className="w-full flex items-center justify-between gap-4 pt-8">
+     <Navbar />
+      <div className="w-full flex items-center justify-between gap-4 pt-4">
         <div>
           <h2 className="text-6xl font-DynaPuff">
             Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
