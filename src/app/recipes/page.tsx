@@ -2,6 +2,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { SiCircleci } from "react-icons/si";
+import Navbar from "../components/Navbar";
 
 const page = () => {
   const [userInput, setUserInput] = useState("");
@@ -39,18 +40,19 @@ const page = () => {
   };
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center font-montserrat pt-4">
-      <div className="w-[50%] lg:w-[30%] pb-8">
+    <div className="relative h-screen bg-[url('/bg.jpg')] bg-center bg-cover flex flex-col items-center font-montserrat  bg-black px-[5%]">
+      <Navbar />
+      <div className=" pb-8">
         <div className="flex flex-col text-xl">
           <textarea
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Wpisz składniki"
-            className="p-4 rounded-t-xl"
+            className="p-4 rounded-t-xl bg-white/20 text-white focus:outline-none"
           />
           <button
             onClick={handleGenerateRecipes}
-            className="px-4 py-2 bg-black text-white rounded-b-xl hover:brightness-75 duration-300 text-center"
+            className="px-4 py-2 bg-white/50 text-white rounded-b-xl hover:brightness-75 duration-300 text-center"
           >
             {loading ? (
               <span className="flex justify-center text-2xl">

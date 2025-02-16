@@ -6,15 +6,14 @@ import Image from "next/image";
 import { promptExamples } from "./utils/Helpers";
 import Navbar from "./components/Navbar";
 
-
 export default function Home() {
   return (
-    <section className="relative h-full w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
-     <Navbar />
-      <div className="w-full flex items-center justify-between gap-4 pt-4">
+    <section className="relative min-h-screen w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
+      <Navbar />
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-4 pt-4">
         <div>
-          <h2 className="text-6xl font-DynaPuff">
-            Ekspresowo wygeneruj przepisy<br></br> z każdych produktów!
+          <h2 className="text-4xl xl:text-6xl font-DynaPuff pt-8 xl:pt-2">
+            Ekspresowo wygeneruj przepisy z każdych produktów!
           </h2>
           <p className="text-xl mt-2 text-gray-200">
             Wpisz produkty, kliknij przycisk i ciesz się z wygenerowanych
@@ -22,22 +21,24 @@ export default function Home() {
           </p>
           <div className="mt-8">
             <div className="w-[65%] flex items-center justify-between bg-white/40 text-white p-2 rounded-xl">
-              <p className="cursor-default text-lg">Wpisz swoje składniki</p>
+              <p className="cursor-default text-sm xl:text-lg">
+                Wpisz swoje składniki
+              </p>
               <div className="flex items-center gap-1">
                 <FiArrowRight className="text-xl animate-pulse" />
-                <button className="flex items-center justify-center px-4 py-2 bg-white/40 rounded-xl font-semibold  cursor-default">
+                <button className="flex items-center justify-center px-4 py-2 bg-white/40 rounded-xl font-semibold cursor-default text-sm xl:text-md">
                   Generuj
                 </button>
               </div>
             </div>
           </div>
-          <div className="mt-8">
+          <div className="mt-8 text-center">
             <h3 className="text-2xl">Przykładowe składniki</h3>
-            <div className="flex justify-between w-[65%] flex-wrap gap-4 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
+            <div className="flex justify-center w-[75%] flex-wrap gap-2 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
               {promptExamples.map((prompt) => (
                 <div
                   key={prompt.id}
-                  className="grid place-items-center bg-white/20 p-1 rounded-xl w-[30%]"
+                  className="grid place-items-center bg-white/20 p-2 rounded-xl"
                 >
                   {prompt.content}
                 </div>
@@ -46,7 +47,7 @@ export default function Home() {
             <div className="w-[65%] flex items-center justify-center mt-8">
               <Link
                 href="/recipes"
-                className="px-6 py-3 bg-[#cca32a] rounded-xl text-3xl hover:brightness-75 duration-300"
+                className="px-6 py-3 bg-accent rounded-xl text-3xl hover:brightness-75 duration-300"
               >
                 Wypróbuj teraz!
               </Link>
@@ -57,7 +58,7 @@ export default function Home() {
           <Image
             src={homepageImage2}
             alt="Food"
-            className="max-w-[600px] lg:max-w-[800px]"
+            className="max-w-[500px] xl:max-w-[700px]"
           />
         </div>
       </div>

@@ -13,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col font-Oswald`}>
-        {children}
-      </body>
+      <body className={`flex flex-col font-Oswald`}>{children}</body>
     </html>
   );
 }

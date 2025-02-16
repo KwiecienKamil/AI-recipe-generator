@@ -39,14 +39,6 @@ export const promptExamples = [
     id: 4,
     content: "wieprzowina, ziemniaki",
   },
-  {
-    id: 5,
-    content: "chleb, szynka, pieczarki",
-  },
-  {
-    id: 6,
-    content: "Makaron, mleko",
-  },
 ];
 
 export const defaultIngredients = [
