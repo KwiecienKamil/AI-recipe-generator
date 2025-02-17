@@ -25,19 +25,27 @@ export const navLinks = [
 export const promptExamples = [
   {
     id: 1,
-    content: "kurczak, ryż, mix warzyw",
+    content: "Kurczak, ryż, mix warzyw",
   },
   {
     id: 2,
-    content: "wołowina, tortilla, ser żółty",
+    content: "Wołowina, tortilla, ser żółty",
   },
   {
     id: 3,
-    content: "kasza, schab, brokół",
+    content: "Kasza, schab, brokół",
   },
   {
     id: 4,
-    content: "wieprzowina, ziemniaki",
+    content: "Wieprzowina, ziemniaki",
+  },
+  {
+    id: 5,
+    content: "Banan, nutella",
+  },
+  {
+    id: 6,
+    content: "Parówki, jajka",
   },
 ];
 

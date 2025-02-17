@@ -42,17 +42,17 @@ const page = () => {
   return (
     <div className="relative h-screen bg-[url('/bg.jpg')] bg-center bg-cover flex flex-col items-center font-montserrat  bg-black px-[5%]">
       <Navbar />
-      <div className=" pb-8">
+      <div className="pb-8">
         <div className="flex flex-col text-xl">
           <textarea
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Wpisz składniki"
-            className="p-4 rounded-t-xl bg-white/20 text-white focus:outline-none"
+            className="p-4 rounded-t-xl bg-white/20 text-white focus:outline-none lg:min-w-[400px]"
           />
           <button
             onClick={handleGenerateRecipes}
-            className="px-4 py-2 bg-white/50 text-white rounded-b-xl hover:brightness-75 duration-300 text-center"
+            className="px-4 py-2 bg-accent text-white rounded-b-xl hover:brightness-75 duration-300 text-center"
           >
             {loading ? (
               <span className="flex justify-center text-2xl">

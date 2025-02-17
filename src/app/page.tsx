@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <section className="relative min-h-screen w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white font-montserrat px-[5%]">
+    <section className="relative min-h-screen w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white bg-black font-montserrat px-[5%]">
       <Navbar />
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-4 pt-4">
         <div>
@@ -32,9 +32,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-8 text-center lg:text-left">
             <h3 className="text-2xl">Przykładowe składniki</h3>
-            <div className="flex justify-center w-[75%] flex-wrap gap-2 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
+            <div className="flex justify-center lg:justify-between w-[65%] flex-wrap gap-2 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
               {promptExamples.map((prompt) => (
                 <div
                   key={prompt.id}
@@ -47,7 +47,7 @@ export default function Home() {
             <div className="w-[65%] flex items-center justify-center mt-8">
               <Link
                 href="/recipes"
-                className="px-6 py-3 bg-accent rounded-xl text-3xl hover:brightness-75 duration-300"
+                className="px-6 py-3 bg-accent rounded-full text-md lg:text-xl hover:brightness-75 duration-300"
               >
                 Wypróbuj teraz!
               </Link>
