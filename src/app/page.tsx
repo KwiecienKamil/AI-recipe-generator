@@ -11,7 +11,7 @@ export default function Home() {
     <section className="relative min-h-screen w-full bg-[url('/bg.jpg')] bg-center bg-cover text-white bg-black font-montserrat px-[5%]">
       <Navbar />
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-4 pt-4">
-        <div>
+        <div className="text-center lg:text-left">
           <h2 className="text-4xl xl:text-6xl font-DynaPuff pt-8 xl:pt-2">
             Ekspresowo wygeneruj przepisy z każdych produktów!
           </h2>
@@ -19,7 +19,7 @@ export default function Home() {
             Wpisz produkty, kliknij przycisk i ciesz się z wygenerowanych
             przepisów
           </p>
-          <div className="mt-8">
+          <div className="mt-8 flex justify-center lg:justify-start">
             <div className="w-[65%] flex items-center justify-between bg-white/40 text-white p-2 rounded-xl">
               <p className="cursor-default text-sm xl:text-lg">
                 Wpisz swoje składniki
@@ -32,7 +32,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-8 text-center lg:text-left">
+          <div className="mt-8 lg:text-left flex flex-col items-center lg:items-start">
             <h3 className="text-2xl">Przykładowe składniki</h3>
             <div className="flex justify-center lg:justify-between w-[65%] flex-wrap gap-2 bg-white/40 rounded-xl overflow-hidden mt-2 p-4">
               {promptExamples.map((prompt) => (

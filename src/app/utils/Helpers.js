@@ -41,7 +41,7 @@ export const promptExamples = [
   },
   {
     id: 5,
-    content: "Banan, nutella",
+    content: "Banan, nutella, chleb",
   },
   {
     id: 6,
