@@ -70,7 +70,7 @@ const page = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
               {recipes.map((recipe: any) => (
                 <div
-                  className="p-2 bg-white/40 max-w-96 rounded-xl"
+                  className="p-2 bg-white max-w-96 rounded-xl"
                   key={recipe.name}
                 >
                   <h4 className="font-semibold text-accent text-xl">
