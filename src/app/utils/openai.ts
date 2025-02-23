@@ -1,7 +1,7 @@
-import { OpenAI } from "openai"; // Correct import for newer versions
+import { OpenAI } from "openai"; 
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // Your OpenAI API key
+  apiKey: process.env.OPENAI_API_KEY, 
 });
 
 export default openai;
