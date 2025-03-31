@@ -16,10 +16,6 @@ export const navLinks = [
     name: "O nas",
     href: "/about",
   },
-  {
-    name: "Kontakt",
-    href: "/contact",
-  },
 ];
 
 export const promptExamples = [

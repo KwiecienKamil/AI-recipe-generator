@@ -9,7 +9,9 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="h-24 w-full flex items-center justify-between py-8 text-white">
+    <nav
+      className={`h-24 w-full flex items-center justify-between py-8 text-white`}
+    >
       <Link href="/" className="flex items-center cursor-pointer text-accent">
         <FaPlateWheat className="text-3xl" />
         <h1 className="text-2xl font-DynaPuff">CoNaTalerz</h1>

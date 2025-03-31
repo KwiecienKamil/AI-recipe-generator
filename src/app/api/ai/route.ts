@@ -21,10 +21,15 @@ export async function POST(req: Request) {
     return NextResponse.json({
       completion: completion.choices[0].message.content,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json({
+        error: "Error processing the request",
+        message: error.message,
+      });
+    }
     return NextResponse.json({
-      error: "Error processing the request",
-      message: error.message,
+      error: "Unknown error occurred",
     });
   }
 }

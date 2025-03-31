@@ -4,9 +4,11 @@ import { useState } from "react";
 import { SiCircleci } from "react-icons/si";
 import Navbar from "../components/Navbar";
 
-const page = () => {
+const Recipes = () => {
   const [userInput, setUserInput] = useState("");
-  const [recipes, setRecipes] = useState([]);
+  const [recipes, setRecipes] = useState<
+    { name: string; description: string; instructions: string[] }[]
+  >([]);
   const [loading, setLoading] = useState(false);
 
   const handleOpenAiCall = (userInput: string) => {
@@ -48,7 +50,7 @@ const page = () => {
             value={userInput}
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Wpisz składniki"
-            className="p-4 rounded-t-xl bg-white/20 text-white focus:outline-none lg:min-w-[400px]"
+            className="p-4 rounded-t-xl bg-white/20 text-white focus:outline-none lg:min-w-[500px]"
           />
           <button
             onClick={handleGenerateRecipes}
@@ -68,7 +70,7 @@ const page = () => {
         <div>
           {recipes && (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-              {recipes.map((recipe: any) => (
+              {recipes.map((recipe) => (
                 <div
                   className="p-4 bg-white max-w-96 rounded-xl"
                   key={recipe.name}
@@ -92,4 +94,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Recipes;
