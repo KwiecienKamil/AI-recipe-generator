@@ -14,7 +14,7 @@ const Recipes = () => {
   const handleOpenAiCall = (userInput: string) => {
     setLoading(true);
     axios
-      .post("http://localhost:3000/api/ai", {
+      .post("https://sunny-sable-0b7e0f.netlify.app/api/ai", {
         userPrompt: userInput,
       })
       .then((res) => {
