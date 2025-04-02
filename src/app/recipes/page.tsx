@@ -19,17 +19,24 @@ const Recipes = () => {
       })
       .then((res) => {
         let rawData = res.data.completion;
+        console.log("Raw data received:", rawData);
+
         rawData = rawData.replace(/```json|```/g, "").trim();
+        console.log("Cleaned data:", rawData);
+
         try {
           const cleanedData = JSON.parse(rawData);
+
           setRecipes(cleanedData);
           setLoading(false);
         } catch (error) {
           console.error("Error parsing JSON:", error);
+          setLoading(false);
         }
       })
       .catch((error) => {
         console.error("Error making the API call:", error);
+        setLoading(false);
       });
   };
 

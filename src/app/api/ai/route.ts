@@ -20,8 +20,6 @@ export async function POST(req: Request) {
       max_tokens: 500,
     });
 
-    console.log("OpenAI Response:", completion); // ✅ Log full response
-
     return NextResponse.json({
       completion: completion.choices[0].message.content,
     });
