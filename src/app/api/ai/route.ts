@@ -7,13 +7,14 @@ export async function POST(req: Request) {
 
     const { userPrompt } = body;
 
+    const sanitizedUserPrompt = userPrompt.replace(/"/g, '\\"');
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: "You are a helpful assistant." },
         {
           role: "user",
-          content: `Generate 6 recipes for ${userPrompt} dish. Recipes need to contain most of these ingredients. Output should be a **valid JSON array** and each object should have fields: 'name' (string), 'description' (string), and 'instructions' (array of strings). Ensure the JSON is properly formatted. If you don't know the ingredient, generate a random dish. Write them in Polish.`,
+          content: `Generate 6 recipes for ${sanitizedUserPrompt} dish. Recipes need to contain most of these ingredients. Output should be in JSON array and each object should contain field name named 'name', description field named 'description' and array of step by step instructions. After dot add space. If you don't know the ingredient just generate random dish. Write them in polish language.`,
         },
       ],
       max_tokens: 500,

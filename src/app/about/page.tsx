@@ -36,7 +36,9 @@ const page = () => {
           </p>
         </div>
         <Image
-          src="https://images.pexels.com/photos/8439094/pexels-photo-8439094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src="/wine.png"
+          height={400}
+          width={400}
           alt="robot with wine"
           className="max-w-[600px] rounded-lg"
         />
