@@ -17,7 +17,6 @@ export async function POST(req: Request) {
           content: `Generate 6 recipes for ${sanitizedUserPrompt} dish. Recipes need to contain most of these ingredients. Output should be in JSON array and each object should contain field name named 'name', description field named 'description' and array of step by step instructions. After dot add space. If you don't know the ingredient just generate random dish. Write them in polish language.`,
         },
       ],
-      max_tokens: 500,
     });
 
     return NextResponse.json({
